@@ -6727,7 +6727,7 @@ msgid "Here's a full list of everything we track and why."
 msgstr "Her er en liste over det vi sporer og hvorfor."
 
 #: frontend/src/metabase/setup/components/DataUsageStep/DataUsageStep.tsx:84
-msgid "Allow Metabase to anonymously collect usage events"
+msgid "Allow to anonymously collect usage events"
 msgstr "Tillat Metabase å samle inn bruksdata anonymt"
 
 #: frontend/src/metabase/setup/components/DataUsageStep/DataUsageStep.tsx:89
@@ -6760,7 +6760,7 @@ msgid "is just a click away."
 msgstr "er bare ett klikk unna."
 
 #: frontend/src/metabase/setup/components/WelcomePage/WelcomePage.tsx:42
-msgid "Welcome to Metabase"
+msgid "Welcome to Services"
 msgstr "Velkommen til Metabase"
 
 #: frontend/src/metabase/setup/components/Setup.jsx:132
@@ -31431,7 +31431,7 @@ msgstr "Jeg er ikke sikker enda"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:41
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:52
-msgid "What will you use Metabase for?"
+msgid "What will you use for?"
 msgstr "Hva vil du bruke Metabase til?"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:62

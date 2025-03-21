@@ -11,7 +11,7 @@ describe(`setup on ${version}`, () => {
     // It redirects to the setup page
     cy.location("pathname").should("eq", "/setup");
     // eslint-disable-next-line no-unscoped-text-selectors -- deprecated usage
-    cy.findByText("Welcome to Metabase");
+    cy.findByText("Welcome to Services");
     // eslint-disable-next-line no-unscoped-text-selectors -- deprecated usage
     cy.findByText("Let's get started").click();
 

@@ -115,7 +115,7 @@ describe("scenarios > setup", () => {
           cy.findByText("All collection is completely anonymous.");
           // turn collection off, which hides data collection description
           cy.findByLabelText(
-            "Allow Metabase to anonymously collect usage events",
+            "Allow to anonymously collect usage events",
           ).click();
 
           cy.findByText("All collection is completely anonymous.").should(
@@ -172,7 +172,7 @@ describe("scenarios > setup", () => {
 
       // Turns off anonymous data collection
       cy.findByLabelText(
-        "Allow Metabase to anonymously collect usage events",
+        "Allow to anonymously collect usage events",
       ).click();
 
       cy.findByText("All collection is completely anonymous.").should(
@@ -356,7 +356,7 @@ describe("scenarios > setup", () => {
 
       // Turns off anonymous data collection
       cy.findByLabelText(
-        "Allow Metabase to anonymously collect usage events",
+        "Allow to anonymously collect usage events",
       ).click();
 
       cy.findByText("All collection is completely anonymous.").should(
@@ -490,7 +490,7 @@ H.describeWithSnowplow("scenarios > setup", () => {
         company_name: "Epic team",
       });
 
-      cy.findByText("What will you use Metabase for?").should("exist");
+      cy.findByText("What will you use for?").should("exist");
       goodEvents++; // 6 - setup/step_seen "usage_question"
       H.expectGoodSnowplowEvent({
         event: "step_seen",
@@ -588,7 +588,7 @@ H.describeWithSnowplow("scenarios > setup", () => {
 
 const skipWelcomePage = () => {
   cy.findByTestId("welcome-page").within(() => {
-    cy.findByText("Welcome to Metabase");
+    cy.findByText("Welcome to Services");
     cy.findByText("Let's get started").click();
   });
 };

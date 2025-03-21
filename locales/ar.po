@@ -6779,7 +6779,7 @@ msgid "Here's a full list of everything we track and why."
 msgstr "إليك قائمة كاملة بكل شيء نتتبعه ولماذا."
 
 #: frontend/src/metabase/setup/components/DataUsageStep/DataUsageStep.tsx:84
-msgid "Allow Metabase to anonymously collect usage events"
+msgid "Allow to anonymously collect usage events"
 msgstr "السماح لاستقامة بجمع أحداث الاستخدام مجهول الهوية"
 
 #: frontend/src/metabase/setup/components/DataUsageStep/DataUsageStep.tsx:89
@@ -6812,7 +6812,7 @@ msgid "is just a click away."
 msgstr "هو مجرد نقرة بعيدا."
 
 #: frontend/src/metabase/setup/components/WelcomePage/WelcomePage.tsx:42
-msgid "Welcome to Metabase"
+msgid "Welcome to Services"
 msgstr "مرحبًا بك في Metabase"
 
 #: frontend/src/metabase/setup/components/Setup.jsx:132
@@ -31762,7 +31762,7 @@ msgstr "لست متأكدا بعد"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:41
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:52
-msgid "What will you use Metabase for?"
+msgid "What will you use for?"
 msgstr "ما الذي ستستخدمه قاعدة التعريف؟"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:62

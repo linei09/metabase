@@ -20,7 +20,7 @@ describe("WelcomePage", () => {
   it("should render before the timeout when the locale is loaded", async () => {
     setup();
 
-    expect(screen.queryByText("Welcome to Metabase")).not.toBeInTheDocument();
-    expect(await screen.findByText("Welcome to Metabase")).toBeInTheDocument();
+    expect(screen.queryByText("Welcome to Services")).not.toBeInTheDocument();
+    expect(await screen.findByText("Welcome to Services")).toBeInTheDocument();
   });
 });

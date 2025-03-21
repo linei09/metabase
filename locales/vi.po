@@ -6701,7 +6701,7 @@ msgid "Here's a full list of everything we track and why."
 msgstr "Đây là danh sách đầy đủ những gì chúng tôi theo dõi và tại sao"
 
 #: frontend/src/metabase/setup/components/DataUsageStep/DataUsageStep.tsx:84
-msgid "Allow Metabase to anonymously collect usage events"
+msgid "Allow to anonymously collect usage events"
 msgstr "Cho phép Metabase thu thập sự kiện được sử dụng ẩn danh"
 
 #: frontend/src/metabase/setup/components/DataUsageStep/DataUsageStep.tsx:89
@@ -6734,7 +6734,7 @@ msgid "is just a click away."
 msgstr "Chỉ một click nữa"
 
 #: frontend/src/metabase/setup/components/WelcomePage/WelcomePage.tsx:42
-msgid "Welcome to Metabase"
+msgid "Welcome to Services"
 msgstr "Chào mừng đến Metabase"
 
 #: frontend/src/metabase/setup/components/Setup.jsx:132
@@ -31281,7 +31281,7 @@ msgstr "Tôi chưa chắc chắn"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:41
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:52
-msgid "What will you use Metabase for?"
+msgid "What will you use for?"
 msgstr "Bạn sẽ sử dụng Metabase để làm gì?"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:62

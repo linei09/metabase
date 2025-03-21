@@ -21,11 +21,11 @@ For now, let's just create an account for ourselves to explore Metabase. Type in
 
 ![Account Setup](images/AccountSetup.png)
 
-## What will you use Metabase for?
+## What will you use for?
 
 Let us know your plans with Metabase so that we can best guide you.
 
-![What will you use Metabase for?](./images/what-will-you-use-metabase-for.png)
+![What will you use for?](./images/what-will-you-use-metabase-for.png)
 
 - Self-service analytics for my own company
 - Embedding analytics into my application

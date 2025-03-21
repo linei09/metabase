@@ -28,9 +28,9 @@ export function parseVersionString(versionString) {
 }
 
 // Versions in which a breaking GUI change was introduced. For example, version
-// 32 added a "What will you use Metabase for?" stage in the initial setup.
+// 32 added a "What will you use for?" stage in the initial setup.
 
-// Change: Adds "What will you use Metabase for?" stage in the initial setup.
+// Change: Adds "What will you use for?" stage in the initial setup.
 // Git sha: d88d32e5e021ad4f47b5d740b78df73945e8ff82
 // Date: 2024-02-08
 // Author: npretto
@@ -101,7 +101,7 @@ export function setupInstance({ version, majorVersion }) {
   cy.button("Next").click();
   cy.findByText("Hi, Superuser. Nice to meet you!");
 
-  // A "What will you use Metabase for?" prompt exists in later versions.
+  // A "What will you use for?" prompt exists in later versions.
   // If it exists, click through.
   if (majorVersion >= metabasePurposeVersion) {
     cy.button("Next").click();
@@ -114,7 +114,7 @@ export function setupInstance({ version, majorVersion }) {
   cy.findByText("All collection is completely anonymous.");
   // turn collection off, which hides data collection description
   cy.findByLabelText(
-    "Allow Metabase to anonymously collect usage events",
+    "Allow to anonymously collect usage events",
   ).click();
   cy.findByText("All collection is completely anonymous.").should("not.exist");
   cy.findByText(finalSetupButton).click();

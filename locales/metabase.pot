@@ -8203,7 +8203,7 @@ msgid "Here's a full list of what we track and why."
 msgstr ""
 
 #: frontend/src/metabase/setup/components/DataUsageStep/DataUsageStep.tsx:84
-msgid "Allow Metabase to anonymously collect usage events"
+msgid "Allow to anonymously collect usage events"
 msgstr ""
 
 #: frontend/src/metabase/setup/components/DataUsageStep/DataUsageStep.tsx:89
@@ -8403,7 +8403,7 @@ msgid "What should we call you?"
 msgstr ""
 
 #: frontend/src/metabase/setup/components/WelcomePage/WelcomePage.tsx:42
-msgid "Welcome to Metabase"
+msgid "Welcome to Services"
 msgstr ""
 
 #: frontend/src/metabase/setup/components/WelcomePage/WelcomePage.tsx:44
@@ -12740,7 +12740,7 @@ msgstr ""
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:41
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:52
-msgid "What will you use Metabase for?"
+msgid "What will you use for?"
 msgstr ""
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:62

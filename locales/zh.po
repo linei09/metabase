@@ -6708,7 +6708,7 @@ msgid "Here's a full list of everything we track and why."
 msgstr "以下是我们跟踪的所有内容和原因的完整清单。"
 
 #: frontend/src/metabase/setup/components/DataUsageStep/DataUsageStep.tsx:84
-msgid "Allow Metabase to anonymously collect usage events"
+msgid "Allow to anonymously collect usage events"
 msgstr "允许Metabase匿名收集使用事件"
 
 #: frontend/src/metabase/setup/components/DataUsageStep/DataUsageStep.tsx:89
@@ -6741,7 +6741,7 @@ msgid "is just a click away."
 msgstr "只需点击一下就可以了。"
 
 #: frontend/src/metabase/setup/components/WelcomePage/WelcomePage.tsx:42
-msgid "Welcome to Metabase"
+msgid "Welcome to Services"
 msgstr "欢迎来到Metabase"
 
 #: frontend/src/metabase/setup/components/Setup.jsx:132
@@ -31355,7 +31355,7 @@ msgstr "我还不确定"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:41
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:52
-msgid "What will you use Metabase for?"
+msgid "What will you use for?"
 msgstr "Metabase 有什么用途？"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:62

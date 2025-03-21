@@ -6703,7 +6703,7 @@ msgid "Here's a full list of everything we track and why."
 msgstr "収集する情報とその理由についてはこちらをご確認ください"
 
 #: frontend/src/metabase/setup/components/DataUsageStep/DataUsageStep.tsx:84
-msgid "Allow Metabase to anonymously collect usage events"
+msgid "Allow to anonymously collect usage events"
 msgstr "Metabaseが匿名の情報収集をすることに同意する"
 
 #: frontend/src/metabase/setup/components/DataUsageStep/DataUsageStep.tsx:89
@@ -6736,7 +6736,7 @@ msgid "is just a click away."
 msgstr "クリックするだけ"
 
 #: frontend/src/metabase/setup/components/WelcomePage/WelcomePage.tsx:42
-msgid "Welcome to Metabase"
+msgid "Welcome to Services"
 msgstr "Metabaseへようこそ"
 
 #: frontend/src/metabase/setup/components/Setup.jsx:132
@@ -31291,7 +31291,7 @@ msgstr "まだ分からない"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:41
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:52
-msgid "What will you use Metabase for?"
+msgid "What will you use for?"
 msgstr "Metabaseを何に使いますか？"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:62

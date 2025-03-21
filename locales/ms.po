@@ -6726,7 +6726,7 @@ msgid "Here's a full list of everything we track and why."
 msgstr "Berikut adalah senarai lengkap semua yang kami jejaki dan sebabnya."
 
 #: frontend/src/metabase/setup/components/DataUsageStep/DataUsageStep.tsx:84
-msgid "Allow Metabase to anonymously collect usage events"
+msgid "Allow to anonymously collect usage events"
 msgstr "Benarkan Metabase mengumpul peristiwa penggunaan secara  tanpa nama"
 
 #: frontend/src/metabase/setup/components/DataUsageStep/DataUsageStep.tsx:89
@@ -6759,7 +6759,7 @@ msgid "is just a click away."
 msgstr "is just a click away."
 
 #: frontend/src/metabase/setup/components/WelcomePage/WelcomePage.tsx:42
-msgid "Welcome to Metabase"
+msgid "Welcome to Services"
 msgstr "Selamat datang ke Metabase"
 
 #: frontend/src/metabase/setup/components/Setup.jsx:132
@@ -31364,7 +31364,7 @@ msgstr "Saya belum pasti lagi"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:41
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:52
-msgid "What will you use Metabase for?"
+msgid "What will you use for?"
 msgstr "Untuk apa anda akan menggunakan Metabase?"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:62

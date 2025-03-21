@@ -47,7 +47,7 @@ describe("setup (EE build, but no token)", () => {
     await skipWelcomeScreen();
     expectSectionToHaveLabel("What's your preferred language?", "1");
     expectSectionToHaveLabel("What should we call you?", "2");
-    expectSectionToHaveLabel("What will you use Metabase for?", "3");
+    expectSectionToHaveLabel("What will you use for?", "3");
     expectSectionToHaveLabel("Add your data", "4");
     expectSectionToHaveLabel("Activate your commercial license", "5");
     expectSectionToHaveLabel("Usage data preferences", "6");

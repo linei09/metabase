@@ -6725,7 +6725,7 @@ msgid "Here's a full list of everything we track and why."
 msgstr "우리가 추적하는 정보와 그 이유에 관한 전체 리스트입니다."
 
 #: frontend/src/metabase/setup/components/DataUsageStep/DataUsageStep.tsx:84
-msgid "Allow Metabase to anonymously collect usage events"
+msgid "Allow to anonymously collect usage events"
 msgstr "Metabase가 사용 정보를 익명으로 수집하도록 허용"
 
 #: frontend/src/metabase/setup/components/DataUsageStep/DataUsageStep.tsx:89
@@ -6758,7 +6758,7 @@ msgid "is just a click away."
 msgstr "클릭만 하면 됩니다."
 
 #: frontend/src/metabase/setup/components/WelcomePage/WelcomePage.tsx:42
-msgid "Welcome to Metabase"
+msgid "Welcome to Services"
 msgstr "Metabase에 오신 것을 환영합니다"
 
 #: frontend/src/metabase/setup/components/Setup.jsx:132
@@ -31311,7 +31311,7 @@ msgstr "아직 잘 모르겠습니다."
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:41
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:52
-msgid "What will you use Metabase for?"
+msgid "What will you use for?"
 msgstr "메타베이스를 어떤 용도로 사용하시나요?"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:62

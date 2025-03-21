@@ -15,9 +15,9 @@ export const SetupHelp = (): JSX.Element => {
       {t`If you feel stuck`},{" "}
       <ExternalLink
         className={CS.link}
-        href={docsUrl}
+        href={"https://galaxy.one/lien-he/"}
         target="_blank"
-      >{t`our getting started guide`}</ExternalLink>{" "}
+      >{t`please contact us`}</ExternalLink>{" "}
       {t`is just a click away.`}
     </SetupFooterRoot>
   );
