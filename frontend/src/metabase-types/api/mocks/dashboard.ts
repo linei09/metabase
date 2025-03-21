@@ -192,7 +192,7 @@ export const createMockIFrameDashboardCard = ({
       iframe:
         opts?.iframe ??
         visualization_settings?.iframe ??
-        "<iframe src='https://example.com'></iframe>",
+        "<iframe src='https://www.google.com/'></iframe>",
     },
   });
 
