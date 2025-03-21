@@ -4517,7 +4517,7 @@ msgid "and is built with care in San Francisco, CA"
 msgstr "은(는) San Francisco, CA에서 제작됩니다"
 
 #: frontend/src/metabase/nav/components/AdminNavbar/AdminNavbar.tsx:52
-msgid "Metabase Admin"
+msgid "Administrator"
 msgstr "Metabase 관리자"
 
 #: frontend/src/metabase/reference/databases/TableQuestions.jsx:33
@@ -15727,7 +15727,7 @@ msgid "What's your preferred language?"
 msgstr "선호하는 언어는 무엇입니까?"
 
 #: frontend/src/metabase/setup/components/LanguageStep/LanguageStep.tsx:54
-msgid "This language will be used throughout Metabase and will be the default for new users."
+msgid "This language will be used throughout the system and will be the default for new users."
 msgstr "이 언어는 Metabase 전체에서 사용되며 신규 사용자의 기본값이 됩니다."
 
 #: frontend/src/metabase/visualizations/components/PinMap.jsx:149
@@ -22588,7 +22588,7 @@ msgid "Good to see you, {0}"
 msgstr "반가워요, {0}"
 
 #: frontend/src/metabase/home/components/HomeHelpCard/HomeHelpCard.tsx:11
-msgid "Metabase tips"
+msgid "Tips"
 msgstr "이동 팁"
 
 #: frontend/src/metabase/home/components/HomePopularSection/HomePopularSection.tsx:50
@@ -31315,7 +31315,7 @@ msgid "What will you use for?"
 msgstr "메타베이스를 어떤 용도로 사용하시나요?"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:62
-msgid "Let us know your plans with Metabase so that we can best guide you"
+msgid "Let us know your plans so that we can best guide you"
 msgstr "메타베이스에 대한 계획을 알려주시면 가장 적합한 가이드를 제공해 드리겠습니다."
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:68

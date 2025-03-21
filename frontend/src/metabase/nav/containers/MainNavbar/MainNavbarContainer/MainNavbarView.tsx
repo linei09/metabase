@@ -207,7 +207,7 @@ export function MainNavbarView({
                 onClick={() => trackOnboardingChecklistOpened()}
               >
                 {/* eslint-disable-next-line no-literal-metabase-strings -- We only show this to non-whitelabelled instances */}
-                {t`How to use Metabase`}
+                {t`How to use`}
               </PaddedSidebarLinkDismissible>
             )}
             {showUploadCSVButton && <DwhUploadCSV />}

@@ -4495,7 +4495,7 @@ msgid "and is built with care in San Francisco, CA"
 msgstr "và được xây dựng cẩn thận ở San Francisco, CA"
 
 #: frontend/src/metabase/nav/components/AdminNavbar/AdminNavbar.tsx:52
-msgid "Metabase Admin"
+msgid "Administrator"
 msgstr "Quản trị viên Metabase"
 
 #: frontend/src/metabase/reference/databases/TableQuestions.jsx:33
@@ -15700,7 +15700,7 @@ msgid "What's your preferred language?"
 msgstr "Ngôn ngữ ưa thích của bạn là gì?"
 
 #: frontend/src/metabase/setup/components/LanguageStep/LanguageStep.tsx:54
-msgid "This language will be used throughout Metabase and will be the default for new users."
+msgid "This language will be used throughout the system and will be the default for new users."
 msgstr "Ngôn ngữ này sẽ được sử dụng trong suốt Metabase và sẽ là mặc định cho người dùng mới."
 
 #: frontend/src/metabase/visualizations/components/PinMap.jsx:149
@@ -22558,7 +22558,7 @@ msgid "Good to see you, {0}"
 msgstr "Rất vui được gặp bạn, {0}"
 
 #: frontend/src/metabase/home/components/HomeHelpCard/HomeHelpCard.tsx:11
-msgid "Metabase tips"
+msgid "Tips"
 msgstr "Mẹo siêu dữ liệu"
 
 #: frontend/src/metabase/home/components/HomePopularSection/HomePopularSection.tsx:50
@@ -31285,7 +31285,7 @@ msgid "What will you use for?"
 msgstr "Bạn sẽ sử dụng Metabase để làm gì?"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:62
-msgid "Let us know your plans with Metabase so that we can best guide you"
+msgid "Let us know your plans so that we can best guide you"
 msgstr "Hãy cho chúng tôi biết kế hoạch của bạn với Metabase để chúng tôi có thể hướng dẫn bạn tốt nhất"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:68

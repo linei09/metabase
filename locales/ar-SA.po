@@ -4785,7 +4785,7 @@ msgstr "وتم بناؤه بعناية في سان فرانسيسكو ، كال�
 
 #: frontend/src/metabase/nav/components/AdminNavbar/AdminNavbar.tsx:52
 #, fuzzy
-msgid "Metabase Admin"
+msgid "Administrator"
 msgstr "مسؤول قاعدة التعريف"
 
 #: frontend/src/metabase/reference/databases/TableQuestions.jsx:33
@@ -18478,7 +18478,7 @@ msgstr "ما هي لغتك المفضلة؟"
 
 #: frontend/src/metabase/setup/components/LanguageStep/LanguageStep.tsx:54
 #, fuzzy
-msgid "This language will be used throughout Metabase and will be the default for new users."
+msgid "This language will be used throughout the system and will be the default for new users."
 msgstr "سيتم استخدام هذه اللغة في جميع أنحاء قاعدة التعريف وستكون هي اللغة الافتراضية للمستخدمين الجدد."
 
 #: frontend/src/metabase/visualizations/components/PinMap.jsx:149
@@ -26902,7 +26902,7 @@ msgstr "من الجيد أن أراك يا {0}"
 
 #: frontend/src/metabase/home/components/HomeHelpCard/HomeHelpCard.tsx:11
 #, fuzzy
-msgid "Metabase tips"
+msgid "Tips"
 msgstr "تلميحات قاعدة التعريف"
 
 #: frontend/src/metabase/home/components/HomePopularSection/HomePopularSection.tsx:50
@@ -36251,7 +36251,7 @@ msgid "What will you use for?"
 msgstr "ما الذي ستستخدمه قاعدة التعريف؟"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:62
-msgid "Let us know your plans with Metabase so that we can best guide you"
+msgid "Let us know your plans so that we can best guide you"
 msgstr "أخبرنا بخططك مع Metabase حتى نتمكن من إرشادك بشكل أفضل"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:68

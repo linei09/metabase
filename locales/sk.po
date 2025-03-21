@@ -4524,8 +4524,8 @@ msgid "and is built with care in San Francisco, CA"
 msgstr "a je postavený v San Franciscu v Kalifornii"
 
 #: frontend/src/metabase/nav/components/AdminNavbar/AdminNavbar.tsx:52
-msgid "Metabase Admin"
-msgstr "Metabase admin"
+msgid "Administrator"
+msgstr "Administrator"
 
 #: frontend/src/metabase/reference/databases/TableQuestions.jsx:33
 #: frontend/src/metabase/reference/segments/SegmentQuestions.jsx:27
@@ -15824,7 +15824,7 @@ msgid "What's your preferred language?"
 msgstr "Aký je váš preferovaný jazyk?"
 
 #: frontend/src/metabase/setup/components/LanguageStep/LanguageStep.tsx:54
-msgid "This language will be used throughout Metabase and will be the default for new users."
+msgid "This language will be used throughout the system and will be the default for new users."
 msgstr "Tento jazyk sa bude používať v metabáze a bude predvolený pre nových používateľov."
 
 #: frontend/src/metabase/visualizations/components/PinMap.jsx:149
@@ -22733,7 +22733,7 @@ msgid "Good to see you, {0}"
 msgstr "Rád ťa vidím, {0}"
 
 #: frontend/src/metabase/home/components/HomeHelpCard/HomeHelpCard.tsx:11
-msgid "Metabase tips"
+msgid "Tips"
 msgstr "Tipy na metabázu"
 
 #: frontend/src/metabase/home/components/HomePopularSection/HomePopularSection.tsx:50
@@ -31571,7 +31571,7 @@ msgid "What will you use for?"
 msgstr "Na čo budete používať databázu Metabase?"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:62
-msgid "Let us know your plans with Metabase so that we can best guide you"
+msgid "Let us know your plans so that we can best guide you"
 msgstr "Dajte nám vedieť o svojich plánoch s Metabase, aby sme vám mohli čo najlepšie poradiť"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:68

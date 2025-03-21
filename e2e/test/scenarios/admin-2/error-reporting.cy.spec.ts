@@ -15,7 +15,7 @@ describe("error reporting modal", () => {
     cy.visit("/");
 
     cy.findByTestId("home-page")
-      .findByText(/see what metabase can do/i)
+      .findByText(/see what we can do/i)
       .realClick();
     cy.wait(500);
 
@@ -42,7 +42,7 @@ describe("error reporting modal", () => {
     cy.visit("/");
 
     cy.findByTestId("home-page")
-      .findByText(/see what metabase can do/i)
+      .findByText(/see what we can do/i)
       .should("exist");
 
     H.commandPaletteButton().click();
@@ -66,7 +66,7 @@ describe("error reporting modal", () => {
     });
 
     cy.findByTestId("home-page")
-      .findByText(/see what metabase can do/i)
+      .findByText(/see what we can do/i)
       .realClick();
 
     cy.realPress(["Control", "F1"]);

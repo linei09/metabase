@@ -19,11 +19,11 @@ describe("HomeHelpCard (EE with token)", () => {
 
   it("should render help link when `show-metabase-links: true`", () => {
     setup({ showMetabaseLinks: true });
-    expect(screen.getByText("Metabase tips")).toBeInTheDocument();
+    expect(screen.getByText("Tips")).toBeInTheDocument();
   });
 
   it("should not render help link when `show-metabase-links: false`", () => {
     setup({ showMetabaseLinks: false });
-    expect(screen.queryByText("Metabase tips")).not.toBeInTheDocument();
+    expect(screen.queryByText("Tips")).not.toBeInTheDocument();
   });
 });

@@ -4513,7 +4513,7 @@ msgid "and is built with care in San Francisco, CA"
 msgstr "dan dibina dengan teliti di San Francisco, CA"
 
 #: frontend/src/metabase/nav/components/AdminNavbar/AdminNavbar.tsx:52
-msgid "Metabase Admin"
+msgid "Administrator"
 msgstr "Pentadbir Metabase"
 
 #: frontend/src/metabase/reference/databases/TableQuestions.jsx:33
@@ -15754,7 +15754,7 @@ msgid "What's your preferred language?"
 msgstr "Apakah bahasa pilihan anda?"
 
 #: frontend/src/metabase/setup/components/LanguageStep/LanguageStep.tsx:54
-msgid "This language will be used throughout Metabase and will be the default for new users."
+msgid "This language will be used throughout the system and will be the default for new users."
 msgstr "Bahasa ini akan digunakan di seluruh Metabase dan akan menjadi lalai untuk pengguna baru."
 
 #: frontend/src/metabase/visualizations/components/PinMap.jsx:149
@@ -22617,7 +22617,7 @@ msgid "Good to see you, {0}"
 msgstr "Gembira melihat anda, {0}"
 
 #: frontend/src/metabase/home/components/HomeHelpCard/HomeHelpCard.tsx:11
-msgid "Metabase tips"
+msgid "Tips"
 msgstr "Tip Metabase"
 
 #: frontend/src/metabase/home/components/HomePopularSection/HomePopularSection.tsx:50
@@ -31368,7 +31368,7 @@ msgid "What will you use for?"
 msgstr "Untuk apa anda akan menggunakan Metabase?"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:62
-msgid "Let us know your plans with Metabase so that we can best guide you"
+msgid "Let us know your plans so that we can best guide you"
 msgstr "Beritahu kami rancangan anda dengan Metabase supaya kami dapat membimbing anda dengan terbaik"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:68

@@ -4518,7 +4518,7 @@ msgid "and is built with care in San Francisco, CA"
 msgstr "y está construido con cariño en San Francisco, CA"
 
 #: frontend/src/metabase/nav/components/AdminNavbar/AdminNavbar.tsx:52
-msgid "Metabase Admin"
+msgid "Administrator"
 msgstr "Configuración Metabase"
 
 #: frontend/src/metabase/reference/databases/TableQuestions.jsx:33
@@ -15757,7 +15757,7 @@ msgid "What's your preferred language?"
 msgstr "¿Cuál es tu idioma preferido?"
 
 #: frontend/src/metabase/setup/components/LanguageStep/LanguageStep.tsx:54
-msgid "This language will be used throughout Metabase and will be the default for new users."
+msgid "This language will be used throughout the system and will be the default for new users."
 msgstr "Este lenguaje se utilizará en Metabase y será el predeterminado para los nuevos usuarios."
 
 #: frontend/src/metabase/visualizations/components/PinMap.jsx:149
@@ -22633,7 +22633,7 @@ msgid "Good to see you, {0}"
 msgstr "Encantado de verte, {0}"
 
 #: frontend/src/metabase/home/components/HomeHelpCard/HomeHelpCard.tsx:11
-msgid "Metabase tips"
+msgid "Tips"
 msgstr "Consejos de Metabase"
 
 #: frontend/src/metabase/home/components/HomePopularSection/HomePopularSection.tsx:50
@@ -31396,7 +31396,7 @@ msgid "What will you use for?"
 msgstr "¿Para qué utilizarás Metabase?"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:62
-msgid "Let us know your plans with Metabase so that we can best guide you"
+msgid "Let us know your plans so that we can best guide you"
 msgstr "Comparte tus planes con Metabase para que podamos guiarte mejor"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:68

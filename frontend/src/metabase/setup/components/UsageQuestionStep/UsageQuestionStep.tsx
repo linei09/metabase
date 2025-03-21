@@ -59,7 +59,7 @@ export const UsageQuestionStep = ({ stepLabel }: NumberedStepProps) => {
           <Text
             color="text-light"
             fw="normal"
-          >{t`Let us know your plans with Metabase so that we can best guide you`}</Text>
+          >{t`Let us know your plans so that we can best guide you`}</Text>
         }
       >
         <Stack pt="lg">

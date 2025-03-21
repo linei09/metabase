@@ -4525,7 +4525,7 @@ msgid "and is built with care in San Francisco, CA"
 msgstr "i pažljivo je napravljen u San Francisku, Kalifornija"
 
 #: frontend/src/metabase/nav/components/AdminNavbar/AdminNavbar.tsx:52
-msgid "Metabase Admin"
+msgid "Administrator"
 msgstr "Metabejs Admin"
 
 #: frontend/src/metabase/reference/databases/TableQuestions.jsx:33
@@ -15795,7 +15795,7 @@ msgid "What's your preferred language?"
 msgstr "Koji jezik preferirate?"
 
 #: frontend/src/metabase/setup/components/LanguageStep/LanguageStep.tsx:54
-msgid "This language will be used throughout Metabase and will be the default for new users."
+msgid "This language will be used throughout the system and will be the default for new users."
 msgstr "Ovaj jezik će se koristiti u Metabejsu i biće podrazumevani za nove korisnike."
 
 #: frontend/src/metabase/visualizations/components/PinMap.jsx:149
@@ -22688,7 +22688,7 @@ msgid "Good to see you, {0}"
 msgstr "Drago mi je da Vas vidimo, {0}"
 
 #: frontend/src/metabase/home/components/HomeHelpCard/HomeHelpCard.tsx:11
-msgid "Metabase tips"
+msgid "Tips"
 msgstr "Saveti za Metabejs"
 
 #: frontend/src/metabase/home/components/HomePopularSection/HomePopularSection.tsx:50
@@ -31487,7 +31487,7 @@ msgid "What will you use for?"
 msgstr "Za šta ćete koristiti Metabase?"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:62
-msgid "Let us know your plans with Metabase so that we can best guide you"
+msgid "Let us know your plans so that we can best guide you"
 msgstr "Obavestite nas o svojim planovima sa Metabase-om kako bismo mogli da vas najbolje vodimo"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:68

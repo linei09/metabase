@@ -23,7 +23,7 @@ For now, let's just create an account for ourselves to explore Metabase. Type in
 
 ## What will you use for?
 
-Let us know your plans with Metabase so that we can best guide you.
+Let us know your plans so that we can best guide you.
 
 ![What will you use for?](./images/what-will-you-use-metabase-for.png)
 

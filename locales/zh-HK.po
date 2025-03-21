@@ -4495,7 +4495,7 @@ msgid "and is built with care in San Francisco, CA"
 msgstr "並且它在加州，舊金山精心被打造"
 
 #: frontend/src/metabase/nav/components/AdminNavbar/AdminNavbar.tsx:52
-msgid "Metabase Admin"
+msgid "Administrator"
 msgstr "Metabase管理員"
 
 #: frontend/src/metabase/reference/databases/TableQuestions.jsx:33
@@ -15695,7 +15695,7 @@ msgid "What's your preferred language?"
 msgstr "您首選的語言是什麼？"
 
 #: frontend/src/metabase/setup/components/LanguageStep/LanguageStep.tsx:54
-msgid "This language will be used throughout Metabase and will be the default for new users."
+msgid "This language will be used throughout the system and will be the default for new users."
 msgstr "該語言將在整個Metabase中使用，並將成為新用戶的默認語言。"
 
 #: frontend/src/metabase/visualizations/components/PinMap.jsx:149
@@ -22556,7 +22556,7 @@ msgid "Good to see you, {0}"
 msgstr "很高興見到你，{0}"
 
 #: frontend/src/metabase/home/components/HomeHelpCard/HomeHelpCard.tsx:11
-msgid "Metabase tips"
+msgid "Tips"
 msgstr "元數據庫提示"
 
 #: frontend/src/metabase/home/components/HomePopularSection/HomePopularSection.tsx:50
@@ -31283,7 +31283,7 @@ msgid "What will you use for?"
 msgstr "您将使用元数据库做什么？"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:62
-msgid "Let us know your plans with Metabase so that we can best guide you"
+msgid "Let us know your plans so that we can best guide you"
 msgstr "让我们知道您使用 Metabase 的计划，以便我们能够最好地指导您"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:68

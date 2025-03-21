@@ -95,7 +95,7 @@ function ProfileLink({
       (!isNewInstance || showOnboardingLink) &&
         canAccessOnboardingPage && {
           // eslint-disable-next-line no-literal-metabase-strings -- We don't show this to whitelabelled instances
-          title: t`How to use Metabase`,
+          title: t`How to use`,
           icon: null,
           link: "/getting-started",
           event: `Navbar;Profile Dropdown;Getting Started`,

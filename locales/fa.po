@@ -4523,7 +4523,7 @@ msgid "and is built with care in San Francisco, CA"
 msgstr "و با مراقبت در سان فرانسیسکو، کالیفرنیا ساخته شده است"
 
 #: frontend/src/metabase/nav/components/AdminNavbar/AdminNavbar.tsx:52
-msgid "Metabase Admin"
+msgid "Administrator"
 msgstr "مدیر متابیس"
 
 #: frontend/src/metabase/reference/databases/TableQuestions.jsx:33
@@ -15736,7 +15736,7 @@ msgid "What's your preferred language?"
 msgstr "زبان مورد نظر شما چیست؟"
 
 #: frontend/src/metabase/setup/components/LanguageStep/LanguageStep.tsx:54
-msgid "This language will be used throughout Metabase and will be the default for new users."
+msgid "This language will be used throughout the system and will be the default for new users."
 msgstr "این زبان در سراسر Metabase استفاده خواهد شد و به طور پیش فرض برای کاربران جدید خواهد بود."
 
 #: frontend/src/metabase/visualizations/components/PinMap.jsx:149
@@ -22597,7 +22597,7 @@ msgid "Good to see you, {0}"
 msgstr "خوشحالم که شما را می بینم، {0}"
 
 #: frontend/src/metabase/home/components/HomeHelpCard/HomeHelpCard.tsx:11
-msgid "Metabase tips"
+msgid "Tips"
 msgstr "نکات متاباز"
 
 #: frontend/src/metabase/home/components/HomePopularSection/HomePopularSection.tsx:50
@@ -31321,7 +31321,7 @@ msgid "What will you use for?"
 msgstr "برای چه کاری از متابیس استفاده خواهید کرد؟"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:62
-msgid "Let us know your plans with Metabase so that we can best guide you"
+msgid "Let us know your plans so that we can best guide you"
 msgstr "برنامه های خود را با متابیس به ما اطلاع دهید تا بتوانیم به بهترین نحو شما را راهنمایی کنیم"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:68

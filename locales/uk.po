@@ -4529,7 +4529,7 @@ msgid "and is built with care in San Francisco, CA"
 msgstr "створено з турботою в Сан Франциско, Каліфорнія"
 
 #: frontend/src/metabase/nav/components/AdminNavbar/AdminNavbar.tsx:52
-msgid "Metabase Admin"
+msgid "Administrator"
 msgstr "Адмінка Metabase"
 
 #: frontend/src/metabase/reference/databases/TableQuestions.jsx:33
@@ -15830,7 +15830,7 @@ msgid "What's your preferred language?"
 msgstr "Якій мові надаєте перевагу?"
 
 #: frontend/src/metabase/setup/components/LanguageStep/LanguageStep.tsx:54
-msgid "This language will be used throughout Metabase and will be the default for new users."
+msgid "This language will be used throughout the system and will be the default for new users."
 msgstr "Ця мова буде застосована до усього Metabase й також для нових користувачів."
 
 #: frontend/src/metabase/visualizations/components/PinMap.jsx:149
@@ -22729,7 +22729,7 @@ msgid "Good to see you, {0}"
 msgstr "Радий бачити вас, {0}"
 
 #: frontend/src/metabase/home/components/HomeHelpCard/HomeHelpCard.tsx:11
-msgid "Metabase tips"
+msgid "Tips"
 msgstr "Поради про Metabase"
 
 #: frontend/src/metabase/home/components/HomePopularSection/HomePopularSection.tsx:50
@@ -31564,7 +31564,7 @@ msgid "What will you use for?"
 msgstr "Для чого ви будете використовувати Metabase?"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:62
-msgid "Let us know your plans with Metabase so that we can best guide you"
+msgid "Let us know your plans so that we can best guide you"
 msgstr "Повідомте нам про свої плани з Metabase, щоб ми могли найкращим чином допомогти вам"
 
 #: frontend/src/metabase/setup/components/UsageQuestionStep/UsageQuestionStep.tsx:68

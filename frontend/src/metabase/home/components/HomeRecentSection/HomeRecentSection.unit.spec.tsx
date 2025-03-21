@@ -46,7 +46,7 @@ describe("HomeRecentSection", () => {
         }),
       });
 
-      expect(screen.getByText("Metabase tips")).toBeInTheDocument();
+      expect(screen.getByText("Tips")).toBeInTheDocument();
     });
 
     it("should not show a help link for regular users", async () => {
@@ -57,7 +57,7 @@ describe("HomeRecentSection", () => {
         }),
       });
 
-      expect(screen.queryByText("Metabase tips")).not.toBeInTheDocument();
+      expect(screen.queryByText("Tips")).not.toBeInTheDocument();
     });
   });
 

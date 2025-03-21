@@ -296,7 +296,7 @@ H.describeWithSnowplow("scenarios > admin > settings", () => {
     cy.visit("/admin/settings/general");
 
     // eslint-disable-next-line no-unscoped-text-selectors -- deprecated usage
-    cy.findByText("Metabase Admin");
+    cy.findByText("Administrator");
     cy.findByLabelText("store icon").should("not.exist");
   });
 
@@ -328,7 +328,7 @@ describe("scenarios > admin > settings (OSS)", { tags: "@OSS" }, () => {
     cy.visit("/admin/settings/general");
 
     // eslint-disable-next-line no-unscoped-text-selectors -- deprecated usage
-    cy.findByText("Metabase Admin");
+    cy.findByText("Administrator");
     cy.findByLabelText("store icon");
   });
 });
@@ -355,7 +355,7 @@ describe("scenarios > admin > settings (EE)", () => {
     cy.visit("/admin/settings/general");
 
     // eslint-disable-next-line no-unscoped-text-selectors -- deprecated usage
-    cy.findByText("Metabase Admin");
+    cy.findByText("Administrator");
     cy.findByLabelText("store icon").should("not.exist");
   });
 });
@@ -617,7 +617,7 @@ describe("scenarios > admin > settings > email settings", () => {
     // Reuse Email setup without relying on the previous test
     cy.request("PUT", "/api/setting", {
       "email-from-address": "admin@metabase.test",
-      "email-from-name": "Metabase Admin",
+      "email-from-name": "Administrator",
       "email-reply-to": ["reply-to@metabase.test"],
       "email-smtp-host": "localhost",
       "email-smtp-password": null,

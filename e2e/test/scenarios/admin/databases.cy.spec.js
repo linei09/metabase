@@ -469,7 +469,7 @@ describe("scenarios > admin > databases > exceptions", () => {
 
     // It is unclear how this issue will be handled,
     // but at the very least it shouldn't render the blank page.
-    cy.get("nav").should("contain", "Metabase Admin");
+    cy.get("nav").should("contain", "Administrator");
     // The response still contains the database name,
     // so there's no reason we can't display it.
     // eslint-disable-next-line no-unscoped-text-selectors -- deprecated usage

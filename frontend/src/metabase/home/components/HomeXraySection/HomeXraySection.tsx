@@ -10,10 +10,10 @@ import {
 } from "metabase/api";
 import { LoadingAndErrorWrapper } from "metabase/components/LoadingAndErrorWrapper";
 import Select from "metabase/core/components/Select";
-import { useSelector } from "metabase/lib/redux";
+// import { useSelector } from "metabase/lib/redux";
 import { isSyncCompleted } from "metabase/lib/syncing";
 import * as Urls from "metabase/lib/urls";
-import { getApplicationName } from "metabase/selectors/whitelabel";
+// import { getApplicationName } from "metabase/selectors/whitelabel";
 import type { Database, DatabaseXray } from "metabase-types/api";
 
 import { HomeCaption } from "../HomeCaption";
@@ -70,13 +70,13 @@ const HomeXrayView = ({ database, candidates = [] }: HomeXrayViewProps) => {
   const tableCount = candidate ? candidate.tables.length : 0;
   const tableMessages = useMemo(() => getMessages(tableCount), [tableCount]);
   const canSelectSchema = schemas.length > 1;
-  const applicationName = useSelector(getApplicationName);
+  // const applicationName = useSelector(getApplicationName);
 
   return (
     <div>
       {isSample ? (
         <HomeCaption primary>
-          {t`Try out these sample x-rays to see what ${applicationName} can do.`}
+          {t`Try out these sample x-rays to see what we can do.`}
         </HomeCaption>
       ) : canSelectSchema ? (
         <HomeCaption primary>

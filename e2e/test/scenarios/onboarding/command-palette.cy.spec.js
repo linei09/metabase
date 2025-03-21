@@ -162,7 +162,7 @@ describe("command palette", () => {
     it("should render links to all admin settings pages for admins", () => {
       cy.visit("/");
       cy.findByTestId("home-page")
-        .findByText(/see what metabase can do/i)
+        .findByText(/see what we can do/i)
         .should("exist");
 
       H.openCommandPalette();
@@ -183,7 +183,7 @@ describe("command palette", () => {
       cy.signInAsNormalUser();
       cy.visit("/");
       cy.findByTestId("home-page")
-        .findByText(/see what metabase can do/i)
+        .findByText(/see what we can do/i)
         .should("exist");
 
       H.openCommandPalette();
@@ -259,7 +259,7 @@ describe("command palette", () => {
         // test
         cy.visit("/");
         cy.findByTestId("home-page")
-          .findByText(/see what metabase can do/i)
+          .findByText(/see what we can do/i)
           .should("exist");
 
         H.openCommandPalette();
