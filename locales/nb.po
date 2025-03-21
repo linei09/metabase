@@ -2236,7 +2236,7 @@ msgid "Check your email for instructions on how to reset your password."
 msgstr "Sjekk din e-post konto for instruksjoner på hvordan du skal tilbakestille passordet."
 
 #: frontend/src/metabase/auth/components/Login/Login.tsx:30
-msgid "Sign in to Metabase"
+msgid "Sign in"
 msgstr "Logg inn på Metabase"
 
 #: frontend/src/metabase/auth/containers/LoginApp.jsx:165

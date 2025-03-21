@@ -2234,7 +2234,7 @@ msgid "Check your email for instructions on how to reset your password."
 msgstr "Norādījumus paroles atiestatīšanai skatiet savā e-pastā."
 
 #: frontend/src/metabase/auth/components/Login/Login.tsx:30
-msgid "Sign in to Metabase"
+msgid "Sign in"
 msgstr "Pierakstieties metabāzē"
 
 #: frontend/src/metabase/auth/containers/LoginApp.jsx:165

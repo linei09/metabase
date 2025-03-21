@@ -2237,7 +2237,7 @@ msgid "Check your email for instructions on how to reset your password."
 msgstr "Periksa emel anda untuk arahan tentang cara menetapkan semula kata laluan anda."
 
 #: frontend/src/metabase/auth/components/Login/Login.tsx:30
-msgid "Sign in to Metabase"
+msgid "Sign in"
 msgstr "Daftar masuk ke Metabase"
 
 #: frontend/src/metabase/auth/containers/LoginApp.jsx:165

@@ -2236,7 +2236,7 @@ msgid "Check your email for instructions on how to reset your password."
 msgstr "Instrukce pro reset hesla najdete ve své e-mailové schránce."
 
 #: frontend/src/metabase/auth/components/Login/Login.tsx:30
-msgid "Sign in to Metabase"
+msgid "Sign in"
 msgstr "Přihlásit do Metabase"
 
 #: frontend/src/metabase/auth/containers/LoginApp.jsx:165

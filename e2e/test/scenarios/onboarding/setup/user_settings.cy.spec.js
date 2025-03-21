@@ -67,7 +67,7 @@ describe("user > settings", () => {
     cy.visit("/account/profile");
     cy.url().should("include", "/auth/login");
     // eslint-disable-next-line no-unscoped-text-selectors -- deprecated usage
-    cy.findByText("Sign in to Metabase");
+    cy.findByText("Sign in");
   });
 
   it("should redirect to the login page when the user has changed the password and logged out (metabase#18151)", () => {
@@ -85,7 +85,7 @@ describe("user > settings", () => {
     // eslint-disable-next-line no-unscoped-text-selectors -- deprecated usage
     cy.findByText("Sign out").click();
     // eslint-disable-next-line no-unscoped-text-selectors -- deprecated usage
-    cy.findByText("Sign in to Metabase");
+    cy.findByText("Sign in");
   });
 
   it("should validate form values (metabase#23259)", () => {

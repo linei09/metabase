@@ -2235,7 +2235,7 @@ msgid "Check your email for instructions on how to reset your password."
 msgstr "עיין בדוא\"ל שלך לקבלת הוראות כיצד לאפס את הסיסמה שלך."
 
 #: frontend/src/metabase/auth/components/Login/Login.tsx:30
-msgid "Sign in to Metabase"
+msgid "Sign in"
 msgstr "היכנס למטאבייס"
 
 #: frontend/src/metabase/auth/containers/LoginApp.jsx:165

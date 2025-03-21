@@ -2225,7 +2225,7 @@ msgid "Check your email for instructions on how to reset your password."
 msgstr "Hãy kiểm tra email hướng dẫn cách đặt lại mật khẩu."
 
 #: frontend/src/metabase/auth/components/Login/Login.tsx:30
-msgid "Sign in to Metabase"
+msgid "Sign in"
 msgstr "Đăng nhập vào Metabase"
 
 #: frontend/src/metabase/auth/containers/LoginApp.jsx:165

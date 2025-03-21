@@ -2240,7 +2240,7 @@ msgid "Check your email for instructions on how to reset your password."
 msgstr "Consulta el teu correu electrònic per obtenir les instruccions sobre com recuperar la teva contrasenya"
 
 #: frontend/src/metabase/auth/components/Login/Login.tsx:30
-msgid "Sign in to Metabase"
+msgid "Sign in"
 msgstr "Iniciar sessió a Metabase"
 
 #: frontend/src/metabase/auth/containers/LoginApp.jsx:165

@@ -2224,7 +2224,7 @@ msgid "Check your email for instructions on how to reset your password."
 msgstr "檢查您的郵件來獲取重設密碼說明"
 
 #: frontend/src/metabase/auth/components/Login/Login.tsx:30
-msgid "Sign in to Metabase"
+msgid "Sign in"
 msgstr "登入Metabase"
 
 #: frontend/src/metabase/auth/containers/LoginApp.jsx:165

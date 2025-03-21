@@ -2233,7 +2233,7 @@ msgid "Check your email for instructions on how to reset your password."
 msgstr "Ellenőrizze e-mailjét a jelszó visszaállítási útmutatóért."
 
 #: frontend/src/metabase/auth/components/Login/Login.tsx:30
-msgid "Sign in to Metabase"
+msgid "Sign in"
 msgstr "Jelentkezzen be a Metabase-ba"
 
 #: frontend/src/metabase/auth/containers/LoginApp.jsx:165

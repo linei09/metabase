@@ -2233,7 +2233,7 @@ msgid "Check your email for instructions on how to reset your password."
 msgstr "Проверете вашия имейл за инструкции как да нулирате паролата си."
 
 #: frontend/src/metabase/auth/components/Login/Login.tsx:30
-msgid "Sign in to Metabase"
+msgid "Sign in"
 msgstr "Влезте в Metabase"
 
 #: frontend/src/metabase/auth/containers/LoginApp.jsx:165
