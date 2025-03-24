@@ -5,6 +5,7 @@
   "description": "Metabase Analytics Report Server",
   "repository": "https://github.com/metabase/metabase",
   "license": "private",
+  "proxy": "http://localhost:3000",
   "engines": {
     "node": ">=22",
     "yarn": "^1.12.3"
@@ -65,6 +66,7 @@
     "hast-util-to-html": "^9.0.0",
     "history": "3",
     "html2canvas-pro": "^1.5.0",
+    "http-proxy-middleware": "^3.0.3",
     "humanize-plus": "^1.8.1",
     "icepick": "2.4.0",
     "iframe-resizer": "~4.3.2",

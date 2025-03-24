@@ -1,29 +1,22 @@
-import { useState, useRef, useEffect } from "react";
-import { t } from "ttag";
+import React, { useState, useRef, useEffect } from "react";
 import { Icon } from "metabase/ui";
-import {
-  ChatbotContainer,
-  ChatHeader,
-  ChatTitle,
-  ChatMessages,
-  Message,
-  ChatInput,
-  Input,
-  SendButton,
-} from "./ChatbotButton.styled";
+import styles from "./ChatbotButton.module.css";
+
+interface Message {
+  content: string;
+  isUser: boolean;
+  timestamp?: string;
+  isTyping?: boolean;
+  displayedContent?: string;
+}
 
 interface ChatbotButtonProps {
   className?: string;
 }
 
-interface ChatMessage {
-  content: string;
-  isUser: boolean;
-}
-
 export const ChatbotButton = ({ className }: ChatbotButtonProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -36,24 +29,16 @@ export const ChatbotButton = ({ className }: ChatbotButtonProps) => {
     scrollToBottom();
   }, [messages]);
 
-  const handleToggle = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInput(e.target.value);
-  };
-
   const handleSend = async () => {
     if (!input.trim() || isLoading) return;
 
     const userMessage = input.trim();
     setInput("");
-    setMessages(prev => [...prev, { content: userMessage, isUser: true }]);
+    setMessages(prev => [...prev, { content: userMessage, isUser: true, timestamp: new Date().toLocaleTimeString() }]);
     setIsLoading(true);
 
     try {
-      const response = await fetch("/api/chatbot", {
+      const response = await fetch("http://localhost:3001/api/v1/chatbot", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -62,18 +47,53 @@ export const ChatbotButton = ({ className }: ChatbotButtonProps) => {
       });
 
       if (!response.ok) {
-        throw new Error("Failed to get response from ChatGPT");
+        throw new Error("Failed to get response from assistant");
       }
 
       const data = await response.json();
-      setMessages(prev => [...prev, { content: data.response, isUser: false }]);
+      const assistantMessage = { 
+        content: data.response, 
+        isUser: false,
+        timestamp: new Date().toLocaleTimeString(),
+        isTyping: true,
+        displayedContent: ""
+      };
+      
+      setMessages(prev => [...prev, assistantMessage]);
+      
+      // Type out the message character by character
+      let currentIndex = 0;
+      const typeMessage = () => {
+        if (currentIndex < data.response.length) {
+          setMessages(prev => {
+            const newMessages = [...prev];
+            const lastMessage = newMessages[newMessages.length - 1];
+            lastMessage.displayedContent = data.response.substring(0, currentIndex + 1);
+            return newMessages;
+          });
+          currentIndex++;
+          setTimeout(typeMessage, 50); // Adjust typing speed here
+        } else {
+          // Remove typing effect after message is complete
+          setMessages(prev => {
+            const newMessages = [...prev];
+            const lastMessage = newMessages[newMessages.length - 1];
+            lastMessage.isTyping = false;
+            lastMessage.displayedContent = undefined;
+            return newMessages;
+          });
+        }
+      };
+      
+      typeMessage();
     } catch (error) {
       console.error("Error:", error);
       setMessages(prev => [
         ...prev,
         {
-          content: "Sorry, I encountered an error. Please try again.",
+          content: "Sorry, I couldn't connect to the assistant. Please try again later.",
           isUser: false,
+          timestamp: new Date().toLocaleTimeString()
         },
       ]);
     } finally {
@@ -91,64 +111,68 @@ export const ChatbotButton = ({ className }: ChatbotButtonProps) => {
   return (
     <>
       <button
-        onClick={handleToggle}
-        className={className}
-        aria-label={t`Chat with AI`}
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          width: "32px",
-          height: "32px",
-          padding: 0,
-          color: isOpen ? "var(--color-brand)" : "var(--color-text-medium)",
-          background: "transparent",
-          border: "none",
-          borderRadius: "6px",
-          cursor: "pointer",
-        }}
+        className={`${styles.chatButton} ${className}`}
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label="Toggle chat"
       >
-        <Icon name="question" size={16} />
+        <Icon name="question" size={24} />
       </button>
+
       {isOpen && (
-        <ChatbotContainer>
-          <ChatHeader>
-            <ChatTitle>{t`Galaxy Assistant`}</ChatTitle>
+        <div className={styles.chatWindow}>
+          <div className={styles.chatHeader}>
+            <h2 className={styles.chatTitle}>Galaxy Assistant</h2>
             <button
-              onClick={handleToggle}
-              style={{
-                background: "none",
-                border: "none",
-                cursor: "pointer",
-                padding: 4,
-              }}
+              className={styles.closeButton}
+              onClick={() => setIsOpen(false)}
+              aria-label="Close chat"
             >
-              <Icon name="close" size={16} />
+              <Icon name="close" size={20} />
             </button>
-          </ChatHeader>
-          <ChatMessages>
+          </div>
+
+          <div className={styles.messagesContainer}>
             {messages.map((message, index) => (
-              <Message key={index} isUser={message.isUser}>
-                {message.content}
-              </Message>
+              <div
+                key={index}
+                className={`${styles.message} ${
+                  message.isUser ? styles.userMessage : styles.assistantMessage
+                } ${message.isTyping ? styles.typing : ''}`}
+              >
+                <span>{message.isTyping ? message.displayedContent : message.content}</span>
+                {message.timestamp && (
+                  <div className={styles.messageTime}>{message.timestamp}</div>
+                )}
+              </div>
             ))}
+            {isLoading && (
+              <div className={`${styles.message} ${styles.assistantMessage}`}>
+                <div className={styles.loadingSpinner} />
+              </div>
+            )}
             <div ref={messagesEndRef} />
-          </ChatMessages>
-          <ChatInput>
-            <Input
+          </div>
+
+          <div className={styles.inputContainer}>
+            <input
               type="text"
               value={input}
-              onChange={handleInputChange}
+              onChange={(e) => setInput(e.target.value)}
               onKeyPress={handleKeyPress}
-              placeholder={t`Type your message...`}
+              placeholder="Type your message..."
+              className={styles.input}
               disabled={isLoading}
             />
-            <SendButton onClick={handleSend} disabled={!input.trim() || isLoading}>
-              <Icon name="arrow_right" size={14} />
-              {t`Send`}
-            </SendButton>
-          </ChatInput>
-        </ChatbotContainer>
+            <button
+              onClick={handleSend}
+              disabled={isLoading || !input.trim()}
+              className={styles.sendButton}
+              aria-label="Send message"
+            >
+              <Icon name="arrow_right" size={20} />
+            </button>
+          </div>
+        </div>
       )}
     </>
   );

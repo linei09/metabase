@@ -164,7 +164,10 @@
                                    "*:8080 ws://*:8080")
                                  ;; CLJS REPL
                                  (when config/is-dev?
-                                   "ws://*:9630")]
+                                   "ws://*:9630")
+                                 ;; Chatbot API
+                                 "http://localhost:3001"
+                                 "ws://localhost:3001"]
                   :manifest-src ["'self'"]}]
       (format "%s %s; " (name k) (str/join " " vs))))})
 
