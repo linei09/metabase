@@ -8,6 +8,7 @@ import NewItemButton from "../NewItemButton";
 import { ProfileLink } from "../ProfileLink";
 import { SearchBar } from "../search/SearchBar";
 import { SearchButton } from "../search/SearchButton";
+import { ChatbotButton } from "../ChatbotButton";
 
 import {
   AppBarInfoContainer,
@@ -76,6 +77,7 @@ const AppBarLarge = ({
         <AppBarRightContainer>
           {isSearchVisible && (isEmbedded ? <SearchBar /> : <SearchButton />)}
           {isNewButtonVisible && <NewItemButton collectionId={collectionId} />}
+          <ChatbotButton />
           {isProfileLinkVisible && (
             <AppBarProfileLinkContainer aria-label={t`Settings menu`}>
               <ProfileLink onLogout={onLogout} />

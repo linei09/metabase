@@ -7,6 +7,7 @@ import CollectionBreadcrumbs from "../../containers/CollectionBreadcrumbs";
 import QuestionLineage from "../../containers/QuestionLineage";
 import { ProfileLink } from "../ProfileLink";
 import { SearchButton } from "../search/SearchButton";
+import { ChatbotButton } from "../ChatbotButton";
 
 import { AppBarLogo } from "./AppBarLogo";
 import {
@@ -50,19 +51,18 @@ const AppBarSmall = ({
 }: AppBarSmallProps): JSX.Element => {
   const isNavBarVisible = isNavBarOpen && isNavBarEnabled;
 
-  const [isSearchActive, setSearchActive] = useState(false);
+  const [isSearchActive, setIsSearchActive] = useState(false);
   const isInfoVisible = isQuestionLineageVisible || isCollectionPathVisible;
   const isHeaderVisible =
     isLogoVisible || isNavBarEnabled || isSearchVisible || isProfileLinkVisible;
   const isSubheaderVisible = !isNavBarVisible && isInfoVisible;
 
   const handleSearchActive = useCallback(() => {
-    setSearchActive(true);
-    onCloseNavbar();
-  }, [onCloseNavbar]);
+    setIsSearchActive(true);
+  }, []);
 
   const handleSearchInactive = useCallback(() => {
-    setSearchActive(false);
+    setIsSearchActive(false);
   }, []);
 
   return (
@@ -79,18 +79,15 @@ const AppBarSmall = ({
               />
             </AppBarToggleContainer>
             <AppBarSearchContainer>
-              {isSearchVisible &&
-                (isEmbedded ? (
-                  <SearchBar
-                    onSearchActive={handleSearchActive}
-                    onSearchInactive={handleSearchInactive}
-                  />
+              {isSearchVisible && !isSearchActive && (
+                isEmbedded ? (
+                  <SearchBar />
                 ) : (
-                  <Flex justify="end">
-                    <SearchButton />
-                  </Flex>
-                ))}
+                  <SearchButton onClick={handleSearchActive} />
+                )
+              )}
             </AppBarSearchContainer>
+            <ChatbotButton />
             {isProfileLinkVisible && (
               <AppBarProfileLinkContainer>
                 <ProfileLink onLogout={onLogout} />
