@@ -1,0 +1,27 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      docker: latest
+  pre_build:
+    commands:
+      - echo "Setting up SSH access"
+      - mkdir -p ~/.ssh
+      - echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+      - chmod 600 ~/.ssh/id_rsa
+      - ssh-keyscan -H $VM_HOST >> ~/.ssh/known_hosts
+  build:
+    commands:
+      - echo "Connecting to VM and executing commands..."
+      - ssh $VM_USER@$VM_HOST << 'EOF'
+        cd /path/to/your/metabase/repo
+        git pull
+        docker rmi metabase/metabase:latest
+        docker build -t metabase/metabase:latest .
+        docker-compose down
+        docker-compose up -d
+        EOF
+  post_build:
+    commands:
+      - echo "Deployment complete!"
