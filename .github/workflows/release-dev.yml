@@ -26,7 +26,8 @@ jobs:
             cd /home/canhvp/g1-metabase
             git checkout dev
             git pull
-            docker build -t your-image-name .
+            docker rmi metabase/metabase:latest
+            docker build -t metabase/metabase:latest .
             docker-compose down
             docker-compose up -d
           EOF
