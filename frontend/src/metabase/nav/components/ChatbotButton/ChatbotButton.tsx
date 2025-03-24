@@ -20,6 +20,7 @@ export const ChatbotButton = ({ className }: ChatbotButtonProps) => {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -28,6 +29,12 @@ export const ChatbotButton = ({ className }: ChatbotButtonProps) => {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  useEffect(() => {
+    if (isOpen && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [isOpen]);
 
   const handleSend = async () => {
     if (!input.trim() || isLoading) return;
@@ -72,9 +79,8 @@ export const ChatbotButton = ({ className }: ChatbotButtonProps) => {
             return newMessages;
           });
           currentIndex++;
-          setTimeout(typeMessage, 50); // Adjust typing speed here
+          setTimeout(typeMessage, 50);
         } else {
-          // Remove typing effect after message is complete
           setMessages(prev => {
             const newMessages = [...prev];
             const lastMessage = newMessages[newMessages.length - 1];
@@ -82,6 +88,9 @@ export const ChatbotButton = ({ className }: ChatbotButtonProps) => {
             lastMessage.displayedContent = undefined;
             return newMessages;
           });
+          setIsLoading(false);
+          // Focus input after assistant message is complete
+          inputRef.current?.focus();
         }
       };
       
@@ -96,13 +105,14 @@ export const ChatbotButton = ({ className }: ChatbotButtonProps) => {
           timestamp: new Date().toLocaleTimeString()
         },
       ]);
-    } finally {
       setIsLoading(false);
+      // Focus input after error message
+      inputRef.current?.focus();
     }
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === "Enter" && !e.shiftKey) {
+    if (e.key === "Enter" && !e.shiftKey && !isLoading) {
       e.preventDefault();
       handleSend();
     }
@@ -155,13 +165,15 @@ export const ChatbotButton = ({ className }: ChatbotButtonProps) => {
 
           <div className={styles.inputContainer}>
             <input
+              ref={inputRef}
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyPress={handleKeyPress}
-              placeholder="Type your message..."
+              placeholder={isLoading ? "Please wait..." : "Type your message..."}
               className={styles.input}
               disabled={isLoading}
+              autoFocus
             />
             <button
               onClick={handleSend}
@@ -169,7 +181,7 @@ export const ChatbotButton = ({ className }: ChatbotButtonProps) => {
               className={styles.sendButton}
               aria-label="Send message"
             >
-              <Icon name="arrow_right" size={20} />
+              <Icon name="chevronright" size={20} />
             </button>
           </div>
         </div>
