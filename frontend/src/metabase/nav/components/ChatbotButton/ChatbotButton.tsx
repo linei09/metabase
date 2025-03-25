@@ -21,20 +21,38 @@ export const ChatbotButton = ({ className }: ChatbotButtonProps) => {
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const [isUserScrolling, setIsUserScrolling] = useState(false);
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
+    if (!isLoading) {
+      scrollToBottom();
+    }
+  }, [messages, isLoading]);
 
   useEffect(() => {
     if (isOpen && inputRef.current) {
       inputRef.current.focus();
     }
   }, [isOpen]);
+
+  const handleScroll = () => {
+    if (messagesEndRef.current) {
+      const { scrollTop, scrollHeight, clientHeight } = messagesEndRef.current.parentElement!;
+      setIsUserScrolling(scrollTop + clientHeight < scrollHeight);
+    }
+  };
+
+  useEffect(() => {
+    if (!isUserScrolling) {
+      scrollToBottom();
+    }
+  }, [messages]);
 
   const handleSend = async () => {
     if (!input.trim() || isLoading) return;
@@ -112,7 +130,7 @@ export const ChatbotButton = ({ className }: ChatbotButtonProps) => {
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === "Enter" && !e.shiftKey && !isLoading) {
+    if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       handleSend();
     }
@@ -141,7 +159,7 @@ export const ChatbotButton = ({ className }: ChatbotButtonProps) => {
             </button>
           </div>
 
-          <div className={styles.messagesContainer}>
+          <div className={styles.messagesContainer} onScroll={handleScroll}>
             {messages.map((message, index) => (
               <div
                 key={index}
@@ -170,9 +188,8 @@ export const ChatbotButton = ({ className }: ChatbotButtonProps) => {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyPress={handleKeyPress}
-              placeholder={isLoading ? "Please wait..." : "Type your message..."}
+              placeholder={isLoading ? "Type your message..." : "Type your message..."}
               className={styles.input}
-              disabled={isLoading}
               autoFocus
             />
             <button
