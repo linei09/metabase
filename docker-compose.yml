@@ -1,7 +1,9 @@
 version: "3.9"
 services:
   metabase:
-    image: metabase/metabase:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: metabase
     hostname: metabase
     volumes:
@@ -25,12 +27,23 @@ services:
     restart: always
   postgres:
     image: postgres:latest
-    container_name: postgres
+    container_name: postgres-metabase
     hostname: postgres
     environment:
       POSTGRES_USER: metabase
       POSTGRES_DB: metabaseappdb
       POSTGRES_PASSWORD: mysecretpassword
+    networks:
+      - metanet1
+    restart: always
+  backend-bot:
+    build:
+      context: ./backend-bot
+      dockerfile: Dockerfile
+    container_name: backend-bot
+    hostname: backend-bot
+    ports:
+      - "3001:3001"
     networks:
       - metanet1
     restart: always

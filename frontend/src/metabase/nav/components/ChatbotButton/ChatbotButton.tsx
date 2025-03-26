@@ -1,8 +1,5 @@
-import type React from "react";
-import { useEffect, useRef, useState } from "react";
-
-import { Icon } from "/Users/canhvp/Desktop/galaxy.one/1.1_PROJECT/g1-metabase/resources/frontend_client/favicon.ico";
-
+import React, { useState, useRef, useEffect } from "react";
+import { Icon } from "metabase/ui";
 import styles from "./ChatbotButton.module.css";
 
 interface Message {
@@ -49,12 +46,8 @@ export const ChatbotButton = ({ className }: ChatbotButtonProps) => {
 
   useEffect(() => {
     if (isOpen) {
-      setMessages(prev => [
-        {
-          content: "Welcome! How can I assist you today?",
-          isUser: false,
-          timestamp: new Date().toLocaleTimeString(),
-        },
+      setMessages((prev) => [
+        { content: "Welcome! How can I assist you today?", isUser: false, timestamp: new Date().toLocaleTimeString() },
         ...prev,
       ]);
     }
@@ -62,28 +55,18 @@ export const ChatbotButton = ({ className }: ChatbotButtonProps) => {
 
   const handleScroll = () => {
     if (messagesContainerRef.current) {
-      const { scrollTop, scrollHeight, clientHeight } =
-        messagesContainerRef.current;
+      const { scrollTop, scrollHeight, clientHeight } = messagesContainerRef.current;
       const isAtBottom = scrollTop + clientHeight >= scrollHeight - 5; // Chấp nhận sai số nhỏ
       setIsUserScrolling(!isAtBottom);
     }
   };
 
   const handleSend = async () => {
-    if (!input.trim() || isLoading) {
-      return;
-    }
+    if (!input.trim() || isLoading) return;
 
     const userMessage = input.trim();
     setInput("");
-    setMessages(prev => [
-      ...prev,
-      {
-        content: userMessage,
-        isUser: true,
-        timestamp: new Date().toLocaleTimeString(),
-      },
-    ]);
+    setMessages((prev) => [...prev, { content: userMessage, isUser: true, timestamp: new Date().toLocaleTimeString() }]);
     setIsLoading(true);
 
     try {
@@ -108,24 +91,21 @@ export const ChatbotButton = ({ className }: ChatbotButtonProps) => {
         displayedContent: "",
       };
 
-      setMessages(prev => [...prev, assistantMessage]);
+      setMessages((prev) => [...prev, assistantMessage]);
 
       let currentIndex = 0;
       const typeMessage = () => {
         if (currentIndex < data.response.length) {
-          setMessages(prev => {
+          setMessages((prev) => {
             const newMessages = [...prev];
             const lastMessage = newMessages[newMessages.length - 1];
-            lastMessage.displayedContent = data.response.substring(
-              0,
-              currentIndex + 1,
-            );
+            lastMessage.displayedContent = data.response.substring(0, currentIndex + 1);
             return newMessages;
           });
           currentIndex++;
           setTimeout(typeMessage, 50);
         } else {
-          setMessages(prev => {
+          setMessages((prev) => {
             const newMessages = [...prev];
             const lastMessage = newMessages[newMessages.length - 1];
             lastMessage.isTyping = false;
@@ -140,11 +120,10 @@ export const ChatbotButton = ({ className }: ChatbotButtonProps) => {
       typeMessage();
     } catch (error) {
       console.error("Error:", error);
-      setMessages(prev => [
+      setMessages((prev) => [
         ...prev,
         {
-          content:
-            "Sorry, there was an issue connecting to the assistant. Please try again.",
+          content: "Sorry, there was an issue connecting to the assistant. Please try again.",
           isUser: false,
           timestamp: new Date().toLocaleTimeString(),
         },
@@ -197,14 +176,8 @@ export const ChatbotButton = ({ className }: ChatbotButtonProps) => {
                   message.isUser ? styles.userMessage : styles.assistantMessage
                 } ${message.isTyping ? styles.typing : ""}`}
               >
-                <span>
-                  {message.isTyping
-                    ? message.displayedContent
-                    : message.content}
-                </span>
-                {message.timestamp && (
-                  <div className={styles.messageTime}>{message.timestamp}</div>
-                )}
+                <span>{message.isTyping ? message.displayedContent : message.content}</span>
+                {message.timestamp && <div className={styles.messageTime}>{message.timestamp}</div>}
               </div>
             ))}
             {isLoading && (
@@ -219,11 +192,9 @@ export const ChatbotButton = ({ className }: ChatbotButtonProps) => {
               ref={inputRef}
               type="text"
               value={input}
-              onChange={e => setInput(e.target.value)}
+              onChange={(e) => setInput(e.target.value)}
               onKeyPress={handleKeyPress}
-              placeholder={
-                isLoading ? "Type your message..." : "Type your message..."
-              }
+              placeholder={isLoading ? "Type your message..." : "Type your message..."}
               className={styles.input}
               autoFocus
             />
