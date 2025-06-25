@@ -26,7 +26,7 @@ jobs:
           git checkout dev
           git pull
           docker rmi metabase/metabase:latest
-          docker build -t metabase/metabase:latest .
+          docker build -t metabase/metabase:latest . --no-cache
           docker compose down
           docker compose up -d
           EOF
