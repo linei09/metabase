@@ -1,0 +1,38 @@
+name: deploy
+
+on:
+    push:
+        branches:
+            - dev
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+        - name: Checkout code
+          run: actions/checkout@v4
+        - name: Setup SSH
+          run: |
+            mkdir -p ~/.ssh
+            echo "${{ secrets.SSH_PRIVATE_KEY_DEV }}" > ~/.ssh/id_rsa
+            chmod 600 ~/.ssh/id_rsa
+            ssh-keyscan -H ${{ secrets.SSH_HOST_DEV }} >> ~/.ssh/known_hosts
+
+        - name: Deploy to VM
+          run: |
+            ssh ${{ secrets.SSH_USER_DEV }}@${{ secrets.SSH_HOST_DEV }} << 'EOF'
+              cd /home/canhvp/g1-metabase
+              git checkout dev
+              git pull
+              docker rmi metabase/metabase:latest
+              docker build -t metabase/metabase:latest .
+              docker-compose down || true
+              docker-compose up -d
+            EOF
+
+        - name: Clean up SSH
+          if: always()
+          run: |
+            rm -rf ~/.ssh/id_rsa
+            rm -rf ~/.ssh/known_hosts
