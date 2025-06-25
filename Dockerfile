@@ -55,7 +55,7 @@ COPY --from=builder /home/node/target/uberjar/metabase.jar /app/
 COPY bin/docker/run_metabase.sh /app/
 
 # expose our default runtime port
-EXPOSE 3000
+EXPOSE 3001
 
 # run it
 ENTRYPOINT ["/app/run_metabase.sh"]
