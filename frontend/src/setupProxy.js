@@ -7,13 +7,13 @@ module.exports = function(app) {
       target: 'http://localhost:3001',
       changeOrigin: true,
       secure: false,
-      pathRewrite: {
-        '^/api/chatbot': '/api/chatbot',
-      },
+      // pathRewrite: {
+      //   '^/api/chatbot': '/api/chatbot',
+      // },
       headers: {
         Connection: 'keep-alive'
       }
     })
   );
-}; 
+};
 
