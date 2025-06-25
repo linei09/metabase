@@ -72,7 +72,7 @@ export const ChatbotButton = ({ className }: ChatbotButtonProps) => {
     const API_BASE_URL = `http://${window.location.hostname}:3001`;
 
     try {
-      const response = await fetch(`${API_BASE_URL}/api/v1/chatbot`, {
+      const response =await fetch("http://20.198.243.26:3001/api/v1/chatbot", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
