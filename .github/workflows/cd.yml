@@ -27,8 +27,8 @@ jobs:
           git pull
           docker rmi metabase/metabase:latest
           docker build -t metabase/metabase:latest .
-          docker-compose down || true
-          docker-compose up -d
+          docker compose down || true
+          docker compose up -d
           EOF
 
       - name: Clean up SSH
