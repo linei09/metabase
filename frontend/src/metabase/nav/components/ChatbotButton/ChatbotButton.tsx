@@ -69,10 +69,9 @@ export const ChatbotButton = ({ className }: ChatbotButtonProps) => {
     setMessages((prev) => [...prev, { content: userMessage, isUser: true, timestamp: new Date().toLocaleTimeString() }]);
     setIsLoading(true);
 
-    const API_BASE_URL = `http://${window.location.hostname}:3001`;
 
     try {
-      const response =await fetch("http://20.198.243.26:3001/api/v1/chatbot", {
+      const response =await fetch("http:/metabase.mynancy.io.vn:30003/api/v1/chatbot", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
