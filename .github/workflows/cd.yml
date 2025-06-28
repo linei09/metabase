@@ -22,7 +22,7 @@ jobs:
       - name: Deploy to VM
         run: |
           ssh ${{ secrets.SSH_USER_DEV }}@${{ secrets.SSH_HOST_DEV }} << 'EOF'
-          cd /home/lydty/metabase
+          cd /home/canhpv/metabase
           git checkout dev
           git pull
           docker rmi metabase/metabase:latest
