@@ -71,7 +71,7 @@ export const ChatbotButton = ({ className }: ChatbotButtonProps) => {
 
 
     try {
-      const response =await fetch("http:/metabase.mynancy.io.vn:30003/api/v1/chatbot", {
+      const response = await fetch("http:/metabase.mynancy.io.vn:30003/api/v1/chatbot", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
