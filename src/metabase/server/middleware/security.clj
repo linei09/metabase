@@ -167,7 +167,8 @@
                                    "ws://*:9630")
                                  ;; Chatbot API
                                  "http://localhost:3001"
-                                 "ws://localhost:3001"]
+                                 "ws://localhost:3001"
+                                 "http://metabase.mynancy.io.vn:30003"]
                   :manifest-src ["'self'"]}]
       (format "%s %s; " (name k) (str/join " " vs))))})
 
