@@ -9,10 +9,11 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "*"}})
+#CORS(app, resources={r"/api/*": {"origins": "*"}})
+CORS(app, resources={r"/api/*": {"origins": "*"}}, supports_credentials=True, allow_headers="*", methods=["GET", "POST", "OPTIONS"])
 
 # Configure the Gemini API
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "AIzaSyDrnDa39ynySrFfFDdFSQhzeP6DxtN71d8")
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "AIzaSyDYnOHKUkjCBoa8Gv6QjhFppyx2I0ysokQ")
 genai.configure(api_key=GOOGLE_API_KEY)
 
 # Model configuration
@@ -49,7 +50,7 @@ def chat():
 
         # Initialize the model
         model = genai.GenerativeModel(
-            model_name="gemini-1.5-flash",
+            model_name="gemini-2.0-flash",
             generation_config=generation_config,
             safety_settings=safety_settings
         )

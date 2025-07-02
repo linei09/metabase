@@ -19,7 +19,8 @@ COPY . .
 
 RUN git config --global --add safe.directory /home/node
 RUN ./bin/build-drivers.sh
-RUN clojure -M:build uberjar
+#RUN clojure -M:build uberjar
+RUN chmod +x bin/build.sh && ./bin/build.sh
 
 # Stage 2: Run Backend
 FROM eclipse-temurin:21-jre-alpine

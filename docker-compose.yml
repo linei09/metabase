@@ -1,7 +1,10 @@
-version: "3.9"
+# version: "3.9" 
 services:
   metabase-frontend:
-    image: ghcr.io/${REPOSITORY}/metabase-frontend:latest
+    build:
+      context: ./metabase-frontend  
+      dockerfile: Dockerfile
+    image: metabase-frontend:latest
     container_name: metabase-frontend
     hostname: metabase-frontend
     ports:
@@ -11,9 +14,12 @@ services:
     restart: always
     depends_on:
       - metabase-backend
-
+        
   metabase-backend:
-    image: ghcr.io/${REPOSITORY}/metabase-backend:latest
+    build:
+      context: ./metabase-backend  
+      dockerfile: Dockerfile
+    image: metabase-backend:latest
     container_name: metabase-backend
     hostname: metabase-backend
     volumes:
@@ -26,16 +32,15 @@ services:
       MB_DB_PORT: 5432
       MB_DB_USER: metabase
       MB_DB_PASS: ${MB_DB_PASS}
+      MB_DB_HOST: postgres
       MB_JETTY_PORT: 3002
+      MB_SITE_URL: http://metabase.mynancy.io.vn:3000
     networks:
       - metanet1
-    healthcheck:
-      test: curl --fail -I http://localhost:3002/api/health || exit 1
-      interval: 15s
-      timeout: 5s
-      retries: 5
     restart: always
-
+    depends_on:
+      - postgres
+        
   postgres:
     image: postgres:latest
     container_name: postgres-metabase
@@ -44,14 +49,17 @@ services:
       POSTGRES_USER: metabase
       POSTGRES_DB: metabaseappdb
       POSTGRES_PASSWORD: ${MB_DB_PASS}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
     networks:
       - metanet1
     restart: always
-
+      
   backend-bot:
     build:
       context: ./backend-bot
       dockerfile: Dockerfile
+    image: backend-bot:latest
     container_name: backend-bot
     hostname: backend-bot
     ports:
@@ -59,6 +67,9 @@ services:
     networks:
       - metanet1
     restart: always
+
+volumes:
+  postgres_data:  # Add persistent volume for database
 
 networks:
   metanet1:
