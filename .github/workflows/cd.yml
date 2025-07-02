@@ -12,6 +12,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
@@ -25,8 +33,15 @@ jobs:
           cd /home/canhpv/metabase
           git checkout dev
           git pull
-          docker rmi metabase/metabase:latest
-          docker build -t metabase/metabase:latest . --no-cache
+
+          docker rmi metabase-frontend:latest || true
+          docker rmi metabase-backend:latest || true
+          docker rmi backend-bot:latest || true
+
+          docker build -t metabase-frontend:latest -f Dockerfile.frontend .
+          docker build -t metabase-backend:latest -f Dockerfile.backend .
+          docker build -t backend-bot:latest -f backend-bot/Dockerfile .
+
           docker compose down
           docker compose up -d
           EOF
