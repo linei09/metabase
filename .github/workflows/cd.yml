@@ -30,7 +30,7 @@ jobs:
       - name: Deploy to VM
         run: |
           ssh ${{ secrets.SSH_USER_DEV }}@${{ secrets.SSH_HOST_DEV }} << 'EOF'
-          cd /home/canhpv/metabase
+          cd /home/lydty/metabase
           git checkout dev
           git pull
 
