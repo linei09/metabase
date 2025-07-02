@@ -1,0 +1,44 @@
+# Stage 1: Build Backend
+FROM node:22-bullseye AS builder
+
+ARG MB_EDITION=oss
+ARG VERSION=1.0.0
+
+WORKDIR /home/node
+
+RUN apt-get update && apt-get upgrade -y && apt-get install wget apt-transport-https gpg curl git -y \
+    && wget -qO - https://packages.adoptium.net/artifactory/api/gpg/key/public | gpg --dearmor | tee /etc/apt/trusted.gpg.d/adoptium.gpg > /dev/null \
+    && echo "deb https://packages.adoptium.net/artifactory/deb $(awk -F= '/^VERSION_CODENAME/{print$2}' /etc/os-release) main" | tee /etc/apt/sources.list.d/adoptium.list \
+    && apt-get update \
+    && apt install temurin-21-jdk -y \
+    && curl -O https://download.clojure.org/install/linux-install-1.11.1.1262.sh \
+    && chmod +x linux-install-1.11.1.1262.sh \
+    && ./linux-install-1.11.1.1262.sh
+
+COPY . .
+
+RUN git config --global --add safe.directory /home/node
+RUN ./bin/build-drivers.sh
+RUN clojure -M:build uberjar
+
+# Stage 2: Run Backend
+FROM eclipse-temurin:21-jre-alpine
+
+ENV FC_LANG en-US LC_CTYPE en_US.UTF-8
+
+RUN apk add -U bash fontconfig curl font-noto font-noto-arabic font-noto-hebrew font-noto-cjk java-cacerts && \
+    apk upgrade && \
+    rm -rf /var/cache/apk/* && \
+    mkdir -p /app/certs && \
+    curl https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem -o /app/certs/rds-combined-ca-bundle.pem  && \
+    /opt/java/openjdk/bin/keytool -noprompt -import -trustcacerts -alias aws-rds -file /app/certs/rds-combined-ca-bundle.pem -keystore /etc/ssl/certs/java/cacerts -keypass changeit -storepass changeit && \
+    curl https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem -o /app/certs/DigiCertGlobalRootG2.crt.pem  && \
+    /opt/java/openjdk/bin/keytool -noprompt -import -trustcacerts -alias azure-cert -file /app/certs/DigiCertGlobalRootG2.crt.pem -keystore /etc/ssl/certs/java/cacerts -keypass changeit -storepass changeit && \
+    mkdir -p /plugins && chmod a+rwx /plugins
+
+COPY --from=builder /home/node/target/uberjar/metabase.jar /app/
+COPY bin/docker/run_metabase.sh /app/
+
+EXPOSE 3002
+
+ENTRYPOINT ["/app/run_metabase.sh"]

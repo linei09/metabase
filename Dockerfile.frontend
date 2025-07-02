@@ -1,0 +1,28 @@
+# Stage 1: Build Frontend
+FROM node:22-bullseye AS builder
+
+WORKDIR /home/node
+
+COPY . .
+
+# Install dependencies and build frontend
+RUN yarn install --frozen-lockfile
+RUN INTERACTIVE=false CI=true MB_EDITION=oss yarn build
+
+# Stage 2: Serve Frontend
+FROM nginx:alpine
+
+# Copy built frontend assets
+COPY --from=builder /app/resources/frontend_client/app/dist /usr/share/nginx/html
+
+#Copy nginx configuration to site-available
+COPY metabase /etc/nginx/sites-available/metabase
+
+# Create a symlink to enable the site
+RUN ln -s /etc/nginx/sites-available/metabase /etc/nginx/sites-enabled/metabase
+
+
+# Expose port
+EXPOSE 3000
+
+CMD ["nginx", "-g", "daemon off;"]
